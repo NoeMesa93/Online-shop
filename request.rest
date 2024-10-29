@@ -1,5 +1,5 @@
-@host = http://localhost:3000
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoiNjcxZjhhMTkzMDk4Nzk4OGZmNzAyYTE5IiwidXN1YXJpb19yb2xlIjoicmVndWxhciIsImlhdCI6MTczMDEyMjY5MH0.VaH8LvajjCX0t5wWU3rtB3aBbsr_Zrh93GeQCsK_3-A
+@host = https://online-shop-7z9j.onrender.com
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoiNjcyMGM0ZjJkNGYwMWI5MGI3MDI2ZGZmIiwidXN1YXJpb19yb2xlIjoicmVndWxhciIsImlhdCI6MTczMDIwMDgyNH0.uhyJ6QO_wwbmlF13kBNWDStgS9nrvbxiZ_j-3oLiVGI
 
 ###
 GET {{host}}/api/products
@@ -11,7 +11,7 @@ Authorization: {{token}}
 Content-Type: application/json
 
 {
-    "name": "Calzoncillos",
+    "name": "Manta",
     "description": "Muy fresquita por dentro",
     "price": 200,
     "department": "Hogar",
@@ -21,6 +21,7 @@ Content-Type: application/json
 
 ###
 PUT {{host}}/api/products/671f5b5022faaa4286f50f73
+Authorization: {{token}}
 Content-Type: application/json
 
 {
