@@ -1,0 +1,77 @@
+@host = http://localhost:3000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoiNjcxZjhhMTkzMDk4Nzk4OGZmNzAyYTE5IiwidXN1YXJpb19yb2xlIjoicmVndWxhciIsImlhdCI6MTczMDEyMjY5MH0.VaH8LvajjCX0t5wWU3rtB3aBbsr_Zrh93GeQCsK_3-A
+
+###
+GET {{host}}/api/products
+
+
+###
+POST {{host}}/api/products
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+    "name": "Calzoncillos",
+    "description": "Muy fresquita por dentro",
+    "price": 200,
+    "department": "Hogar",
+    "stock": 100,
+    "avalible": true
+}
+
+###
+PUT {{host}}/api/products/671f5b5022faaa4286f50f73
+Content-Type: application/json
+
+{
+    "stock": 30
+}
+
+### Get by id
+###
+GET {{host}}/api/products/671f6a3a8dbc35284613db66
+
+
+### Get por departamento
+###
+GET {{host}}/api/products/dpt/electronica
+
+### Get por disposnibilidad
+###
+GET {{host}}/api/products/available
+
+
+### Get por rango de precios
+###
+GET {{host}}/api/products/price?min=10&max=200
+
+###
+DELETE {{host}}/api/products/671b881d5be4e21c2ef88517
+
+### REQUEST USERS
+###
+POST {{host}}/api/users/register
+Content-Type: application/json
+
+{
+    "username": "Noelia",
+    "email": "correo@gmail.com",
+    "password": "contrasena"
+}
+
+###
+POST {{host}}/api/users/login
+Content-Type: application/json
+
+{
+    "email": "correo@gmail.com",
+    "password": "contrasena"
+}
+
+###
+PUT {{host}}/api/users/add/671f6f7607649d6b15b34f57
+Authorization: {{token}}
+
+###
+GET {{host}}/api/users/profile
+Authorization: {{token}}
