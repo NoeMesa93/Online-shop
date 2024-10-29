@@ -32,7 +32,7 @@ const loginUser = async (req, res, next) => {
         return res.status(401).json({ message: 'No existe el email y/o contraseña' })
     }
     res.json({
-        message: 'Login correcto',
+        message: '👌',
         token: createToken(user)
     })
 }
